@@ -1,4 +1,4 @@
-function t_access_max = compute_t_access_max(d, v, v_min, a_dec)
+function t_access_max = compute_t_access_max(d, v, v_min, a_dec, t0)
 
 lol = v^2 + 2*a_dec*d;
 if lol < 0
@@ -15,6 +15,6 @@ if delta_t2 < 0
     delta_t2 = 0;
 end
 
-t0 = get_param('trial_model', 'SimulationTime');
+%t0 = get_param('trial_model', 'SimulationTime');
 t_access_max = t0 + delta_t1 + delta_t2;
 end
